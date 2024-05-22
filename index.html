@@ -8,7 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
             background: url('https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/background.jpg?raw=true') no-repeat center center fixed;
             background-size: cover;
             color: white;
@@ -16,6 +17,7 @@
         .container {
             display: flex;
             align-items: center;
+            justify-content: center; /* Centering the content horizontally */
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
@@ -28,30 +30,30 @@
         }
         .content {
             max-width: 600px;
+            text-align: center; /* Centering the content horizontally */
         }
         .content p {
             font-weight: bold;
-            font-size: 20px; /* Added font size */
+            font-size: 20px; /* Changed font size to 20px */
+            margin: 0; /* Remove default paragraph margin */
+            line-height: 1.4; /* Adjust line height for better readability */
         }
-        a {
+        .content a {
             color: #1E90FF;
             text-decoration: none;
         }
-        a:hover {
+        .content a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>About Me</h1>
+    <h1 style="text-align: center; margin: 0;">About Me</h1>
     <div class="container">
         <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/Mani-2024.png?raw=true" alt="Manikanta">
         <div class="content">
             <p>
-                My name is Manikanta. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. 
-                <br>
-                <br>
-                I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
+                My name is Manikanta. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
             </p>
         </div>
     </div>
