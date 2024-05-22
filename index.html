@@ -7,54 +7,75 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+            margin: 0;
+            padding: 0;
             background: url('https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/background.jpg?raw=true') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
         .container {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centering the content horizontally */
+            justify-content: center;
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
         }
         .container img {
             max-width: 150px;
-            margin-right: 20px;
             border-radius: 50%;
             border: 2px solid #fff;
+            margin-right: 20px;
         }
         .content {
-            max-width: 600px;
-            text-align: center; /* Centering the content horizontally */
+            text-align: left;
         }
         .content p {
+            font-size: 18px;
+            line-height: 1.6;
             font-weight: bold;
-            font-size: 20px; /* Changed font size to 20px */
-            margin: 0; /* Remove default paragraph margin */
-            line-height: 1.4; /* Adjust line height for better readability */
         }
         .content a {
-            color: #1E90FF;
+            color: #ff6347; /* Tomato color */
             text-decoration: none;
         }
         .content a:hover {
             text-decoration: underline;
         }
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin: 0;">About Me</h1>
+    <h1>About Me</h1>
     <div class="container">
         <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/Mani-2024.png?raw=true" alt="Manikanta">
         <div class="content">
             <p>
                 My name is Manikanta. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
             </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/manitechy/"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/linkedin-icon.png?raw=true" alt="LinkedIn"></a>
+                <a href="https://github.com/manikanta-suru"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/github.png?raw=true" alt="GitHub"></a>
+                <a href="https://www.youtube.com/@manitechy"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/YouTube.png?raw=true" alt="YouTube"></a>
+                <a href="https://manitechy.medium.com/"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/medium-logo.png?raw=true" alt="Medium"></a>
+            </div>
         </div>
     </div>
 </body>
