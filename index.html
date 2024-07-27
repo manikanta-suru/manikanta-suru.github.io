@@ -54,29 +54,37 @@
             text-align: center;
         }
         .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .social-links img {
-            width: 40px;
-            height: 40px;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
+            display: block;
+            margin: 10px 0; /* Adjusted margin for spacing between buttons */
             padding: 12px 24px;
             background-color: #f7df1e; /* Yellow background */
             color: black; /* Text color */
-            font-size: 18px;
-            font-weight: bold;
+            border-radius: 8px;
             text-align: center;
             text-decoration: none;
-            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .cta-button:hover {
+        .social-links img {
+            width: 40px; /* Icon size */
+            height: 40px; /* Icon size */
+            vertical-align: middle; /* Align icons with text */
+            margin-right: 10px; /* Space between icon and text */
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
             background-color: #f4c300; /* Darker yellow on hover */
             transform: scale(1.05);
+        }
+        .social-links a:hover img {
+            transform: scale(1.1);
+        }
+        .separator {
+            margin: 20px 0;
+            border-top: 2px solid #fff; /* White separator line */
+            width: 100%;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -89,12 +97,23 @@
                 My name is Manikanta. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
             </p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/manitechy/"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/linkedin-icon.png?raw=true" alt="LinkedIn"></a>
-                <a href="https://github.com/manikanta-suru"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/github.png?raw=true" alt="GitHub"></a>
-                <a href="https://www.youtube.com/@manitechy"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/YouTube.png?raw=true" alt="YouTube"></a>
-                <a href="https://manitechy.medium.com/"><img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/medium-logo.png?raw=true" alt="Medium"></a>
+				</a>
+                <a href="https://github.com/manikanta-suru">
+                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/github.png?raw=true" alt="GitHub">
+                    Visit My GitHub Profile
+                <a href="https://www.linkedin.com/in/manitechy/">
+                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/linkedin-icon.png?raw=true" alt="LinkedIn">
+                    Visit My LinkedIn Profile
+                </a>
+                <a href="https://www.youtube.com/@manitechy">
+                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/YouTube.png?raw=true" alt="YouTube">
+                    Visit My YouTube Channel
+                </a>
+                <a href="https://manitechy.medium.com/">
+                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/medium-logo.png?raw=true" alt="Medium">
+                    Visit My Medium Blog
+                </a>
             </div>
-            <a href="https://github.com/manikanta-suru" class="cta-button">Visit My GitHub Profile</a>
         </div>
     </div>
 </body>
