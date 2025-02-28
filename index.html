@@ -5,236 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Manikanta</title>
     <style>
-        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Tech-inspired gradient */
-            background-attachment: fixed;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        h1 {
+            background: #1e3c72;
+            color: #fff;
             text-align: center;
-            margin-top: 30px;
-            font-size: 2.5rem;
-            color: #f7df1e; /* Yellow color for the heading */
-            animation: flash 2s infinite; /* Flashing animation for the heading */
-        }
-
-        @keyframes flash {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px auto;
-            max-width: 900px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
         }
 
-        .profile-section {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .profile-section img {
-            width: 200px;
-            height: 200px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 4px solid #ffffff;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite; /* Pulsating animation for the profile picture */
+            border: 3px solid #fff;
+            margin-bottom: 15px;
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .content p {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin: 0 0 20px;
-        }
-
-        .content a {
-            color: #ff6347;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .content a:hover {
-            color: #ff4500;
-            text-decoration: underline;
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
+        p {
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
             background-color: #f7df1e;
-            color: #000000;
-            border-radius: 8px;
+            color: #000;
             text-decoration: none;
-            font-size: 1rem;
+            border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .social-links a:hover {
-            background-color: #f4c300;
-            transform: scale(1.05);
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover img {
-            transform: scale(1.1);
-        }
-
-        .separator {
+        /* Play and Stop Buttons */
+        .audio-controls {
             margin: 20px 0;
-            border-top: 2px solid #ffffff;
-            width: 100%;
-            max-width: 800px;
         }
 
-        /* Play Button Styles */
-        .play-button {
+        .btn {
             display: inline-block;
-            margin-top: 10px;
             padding: 10px 20px;
-            background-color: #f7df1e;
-            color: #000000;
-            border-radius: 8px;
+            background: #f7df1e;
+            color: #000;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 16px;
+            margin: 5px;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .play-button:hover {
-            background-color: #f4c300;
-            transform: scale(1.05);
-        }
-
-        .play-button img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 10px;
-            }
-
-            .profile-section img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .content p {
-                font-size: 1rem;
-            }
-
-            .social-links a {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
+        .btn:hover {
+            background: #f4c300;
         }
     </style>
 </head>
 <body>
-    <h1>About Me</h1>
+
     <div class="container">
-        <div class="profile-section">
-            <img src="https://github.com/manikanta-suru/manikanta-suru.github.io/blob/main/Pictures/Manikanta%20Suru%20Passport%20size%20picture.JPG?raw=true" alt="Manikanta Suru">
-            <div class="content">
-                <p id="bio-text">
-                    My name is <span style="animation: flash 2s infinite;">Manikanta</span>. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
-                </p>
-                <!-- Play Button for Bio -->
-                <div class="play-button" onclick="playBio()">
-                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/play-icon.png?raw=true" alt="Play">
-                    Listen to My Bio
-                </div>
-            </div>
+        <img src="https://github.com/manikanta-suru/manikanta-suru.github.io/blob/main/Pictures/Manikanta%20Suru%20Passport%20size%20picture.JPG?raw=true" alt="Manikanta Suru" class="profile-img">
+        <p>My name is Manikanta. I’m an MCA postgraduate from <a href="https://drbrau.in/" style="color: #f7df1e;">Dr. B.R. Ambedkar University</a>, Srikakulam. I specialize in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.</p>
+        
+        <div class="audio-controls">
+            <button class="btn" onclick="playBio()">▶ Play Bio</button>
+            <button class="btn" onclick="stopBio()">⏹ Stop</button>
         </div>
-        <div class="separator"></div>
+
         <div class="social-links">
-            <a href="https://github.com/manikanta-suru">
-                <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/github.png?raw=true" alt="GitHub">
-                Visit My GitHub Profile
-            </a>
-            <a href="https://www.linkedin.com/in/manitechy/">
-                <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/linkedin-icon.png?raw=true" alt="LinkedIn">
-                Visit My LinkedIn Profile
-            </a>
-            <a href="https://www.youtube.com/@manitechy">
-                <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/YouTube.png?raw=true" alt="YouTube">
-                Visit My YouTube Channel
-            </a>
-            <a href="https://manitechy.medium.com/">
-                <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/medium-logo.png?raw=true" alt="Medium">
-                Visit My Medium Blog
-            </a>
-            <a href="https://community.aws/@mani2023">
-                Visit My AWS Community Page
-            </a>
+            <a href="https://github.com/manikanta-suru">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/manitechy/">LinkedIn Profile</a>
+            <a href="https://www.youtube.com/@manitechy">YouTube Channel</a>
         </div>
     </div>
 
     <script>
-        // JavaScript to convert text to speech
+        let speech;
+
         function playBio() {
-            const bioText = document.getElementById('bio-text').innerText; // Get the bio text
-            const speech = new SpeechSynthesisUtterance(bioText); // Create a speech object
-            speech.lang = 'en-US'; // Set the language
-            speech.volume = 1; // Volume (0 to 1)
-            speech.rate = 1; // Speed (0.1 to 10)
-            speech.pitch = 1; // Pitch (0 to 2)
-            window.speechSynthesis.speak(speech); // Play the speech
+            const bioText = "My name is Manikanta. I am an MCA postgraduate from Dr. B.R. Ambedkar University, Srikakulam. I specialize in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.";
+            speech = new SpeechSynthesisUtterance(bioText);
+            speech.lang = "en-IN";
+            window.speechSynthesis.speak(speech);
+        }
+
+        function stopBio() {
+            window.speechSynthesis.cancel();
         }
     </script>
+
 </body>
 </html>
