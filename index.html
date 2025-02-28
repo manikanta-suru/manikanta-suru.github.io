@@ -21,6 +21,16 @@
             margin-top: 30px;
             font-size: 2.5rem;
             color: #f7df1e; /* Yellow color for the heading */
+            animation: flash 2s infinite; /* Flashing animation for the heading */
+        }
+
+        @keyframes flash {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
         }
 
         .container {
@@ -48,6 +58,16 @@
             border-radius: 50%;
             border: 4px solid #ffffff;
             margin-bottom: 20px;
+            animation: pulse 2s infinite; /* Pulsating animation for the profile picture */
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .content {
@@ -115,6 +135,32 @@
             max-width: 800px;
         }
 
+        /* Play Button Styles */
+        .play-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f7df1e;
+            color: #000000;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: #f4c300;
+            transform: scale(1.05);
+        }
+
+        .play-button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -144,9 +190,14 @@
         <div class="profile-section">
             <img src="https://github.com/manikanta-suru/manikanta-suru.github.io/blob/main/Pictures/Manikanta%20Suru%20Passport%20size%20picture.JPG?raw=true" alt="Manikanta Suru">
             <div class="content">
-                <p>
-                    My name is Manikanta. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
+                <p id="bio-text">
+                    My name is <span style="animation: flash 2s infinite;">Manikanta</span>. I’m an MCA postgraduate from the College of Engineering - <a href="https://drbrau.in/">Dr. B.R. Ambedkar University</a>, Srikakulam with a degree in Computer Applications. I am an experienced specialist with a demonstrated history of working in the Information Technology and Services industry. I am skilled in cloud technologies such as AWS and Microsoft Azure, as well as Windows and VMware.
                 </p>
+                <!-- Play Button for Bio -->
+                <div class="play-button" onclick="playBio()">
+                    <img src="https://github.com/manikanta-suru/manikanta_suru/blob/main/Pictures/play-icon.png?raw=true" alt="Play">
+                    Listen to My Bio
+                </div>
             </div>
         </div>
         <div class="separator"></div>
@@ -172,5 +223,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // JavaScript to convert text to speech
+        function playBio() {
+            const bioText = document.getElementById('bio-text').innerText; // Get the bio text
+            const speech = new SpeechSynthesisUtterance(bioText); // Create a speech object
+            speech.lang = 'en-US'; // Set the language
+            speech.volume = 1; // Volume (0 to 1)
+            speech.rate = 1; // Speed (0.1 to 10)
+            speech.pitch = 1; // Pitch (0 to 2)
+            window.speechSynthesis.speak(speech); // Play the speech
+        }
+    </script>
 </body>
 </html>
