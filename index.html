@@ -5,63 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biography - Manikanta Suru</title>
   <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body style="background-color: white";>
 
+<body style="background-color: white;">
 
   <header>
-   <img src="Image.jpeg" alt="Round Image" width="200" style="border-radius: 50%;">
+    <img src="Image.jpeg" alt="Manikanta Suru" width="200" style="border-radius: 50%;">
     <marquee behavior="scroll" direction="left">
-    <h1>Manikanta Suru</h1></marquee>
-    <h3> Senior Consultant </h3>
+      <h1>Manikanta Suru</h1>
+    </marquee>
+    <h3>Senior Consultant</h3>
   </header>
+
   <main>
     <section id="about">
       <h2>👨‍💻 About Me</h2>
-      <p>I'm a postgraduate in Computer Applications (MCA) from the College of Engineering – Dr. B.R. Ambedkar University, Srikakulam.With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure, along with deep experience in Windows Server administration and VMware virtualization.</p>
+      <p>
+        I'm a postgraduate in Computer Applications (MCA) from the College of Engineering – Dr. B.R. Ambedkar University, Srikakulam.
+        With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure, along with deep experience in Windows Server administration and VMware virtualization.
+      </p>
     </section>
 
     <section id="projects">
       <h2>🌐 My Channels</h2>
       <ul>
-        <div class="logo">
-                
-      </a>  </div>      
-       <li> <a href="https://github.com/manikanta-suru" target="_blank" rel="noopener noreferrer">  Github Profile </a> </li>
-       <a href="https://github.com/manikanta-suru" target="_blank">
-  <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
-</a>
-       <li> <a href="https://www.linkedin.com/in/manitechy/" target="_blank" rel="noopener noreferrer">  Linkedin Profile </a> </li> <a href="https://www.linkedin.com/in/manitechy/" target="_blank">
-  <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
-</a>
-       <li> <a href="https://www.youtube.com/@manitechy" target="_blank" rel="noopener noreferrer">  Personal Youtube Channel </a> </li> <a href="https://www.youtube.com/@manitechy" target="_blank" style="text-decoration: none;">
-      <ion-icon name="logo-youtube" size="small" style="color: #ec0c1f;"></ion-icon>
-    </a>
-       <li> <a href="https://manitechy.medium.com/" target="_blank" rel="noopener noreferrer">  Mediam Blog </a> </li>
-       <a href="https://manitechy.medium.com/" target="_blank">
-  <ion-icon class="fab fa-medium fa-2x" style="color: black;"></ion-icon>
-</a>
-       <li> <a href="https://community.aws/@mani2023" target="_blank" rel="noopener noreferrer">  AWS Community Builder </a> </li>
+        <li>
+          <a href="https://github.com/manikanta-suru" target="_blank" rel="noopener noreferrer">
+            Github Profile <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/manitechy/" target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@manitechy" target="_blank" rel="noopener noreferrer">
+            Personal YouTube Channel <ion-icon name="logo-youtube" size="large" style="color: #ec0c1f;"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://manitechy.medium.com/" target="_blank" rel="noopener noreferrer">
+            Medium Blog <ion-icon name="logo-medium" size="large" style="color: black;"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://community.aws/@mani2023" target="_blank" rel="noopener noreferrer">
+            AWS Community Builder 🌩️
+          </a>
+        </li>
       </ul>
-              
     </section>
 
     <section id="Reachme">
-      <h2>📬Reach Me At Below</h2>
+      <h2>📬 Reach Me Below</h2>
+
       <button onclick="showEmail()">Show Email</button>
-      <p id="📧email" style="display:none;">Email:manikanta.suru@outlook.com</p>
+      <p id="email" style="display:none;">📧 Email: manikanta.suru@outlook.com</p>
+
       <button onclick="showContact()">Show Contact</button>
-      <p id="📱contact" style="display:none;">Contact Number:+91-7569413417</p>
-      <button onclick="Location()">Show Location</button>
-      <p id="🏠Location" style="display:none;">Location:Hyderabad,India</p>
+      <p id="contact" style="display:none;">📱 Contact Number: +91-7569413417</p>
+
+      <button onclick="showLocation()">Show Location</button>
+      <p id="location" style="display:none;">🏠 Location: Hyderabad, India</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Manikanta Suru. All rights reserved.</p>
   </footer>
-<script src="script.js"></script>
+
+  <script>
+    function showEmail() {
+      document.getElementById("email").style.display = "block";
+    }
+
+    function showContact() {
+      document.getElementById("contact").style.display = "block";
+    }
+
+    function showLocation() {
+      document.getElementById("location").style.display = "block";
+    }
+  </script>
+
 </body>
 </html>
