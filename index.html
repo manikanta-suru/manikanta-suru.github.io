@@ -5,62 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biography - Manikanta Suru</title>
   <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <style>
     body {
       background-color: white;
       font-family: Arial, sans-serif;
+      margin: 20px;
     }
+
     header {
       text-align: center;
-      margin-bottom: 20px;
     }
+
     header img {
       border-radius: 50%;
     }
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+
+    h1, h2, h3 {
+      margin: 10px 0;
     }
-    ul {
-      list-style-type: none;
+
+    section#about {
+      font-family: Calibri, sans-serif;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    ul.channel-list {
+      list-style: none;
       padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    .channel-item {
+
+    ul.channel-list li {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      gap: 8px;
     }
-    .channel-item ion-icon {
-      margin-left: 10px;
-    }
-    section {
-      margin-top: 40px;
-    }
-    .contact-section button {
-      display: block;
-      margin-top: 10px;
-    }
-    .contact-section p {
-      margin: 5px 0 15px 0;
+
+    ul.channel-list a {
+      text-decoration: none;
       font-weight: bold;
     }
+
+    section#Reachme {
+      margin-top: 40px;
+    }
+
+    section#Reachme button {
+      margin: 10px 0;
+      padding: 8px 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section#Reachme p {
+      margin: 5px 0 15px 0;
+      display: none;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding: 10px;
-      background-color: #f2f2f2;
+      margin-top: 50px;
+      font-weight: bold;
     }
   </style>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
 
   <header>
-    <img src="Image.jpeg" alt="Manikanta Suru" width="200" />
-    <marquee behavior="scroll" direction="left"><h1>Manikanta Suru</h1></marquee>
+    <img src="Image.jpeg" alt="Manikanta Suru" width="200">
+    <marquee behavior="scroll" direction="left">
+      <h1>Manikanta Suru</h1>
+    </marquee>
     <h3>Senior Consultant</h3>
   </header>
 
@@ -74,42 +97,43 @@
       </p>
     </section>
 
-    <section id="channels">
+    <section id="projects">
       <h2>🌐 My Channels</h2>
-      <ul>
-        <li class="channel-item">
-          <a href="https://github.com/manikanta-suru" target="_blank">Github Profile</a>
+      <ul class="channel-list">
+        <li>
           <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
+          <a href="https://github.com/manikanta-suru" target="_blank">GitHub Profile</a>
         </li>
-        <li class="channel-item">
-          <a href="https://www.linkedin.com/in/manitechy/" target="_blank">LinkedIn Profile</a>
+        <li>
           <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
+          <a href="https://www.linkedin.com/in/manitechy/" target="_blank">LinkedIn Profile</a>
         </li>
-        <li class="channel-item">
-          <a href="https://www.youtube.com/@manitechy" target="_blank">Personal YouTube Channel</a>
+        <li>
           <ion-icon name="logo-youtube" size="large" style="color: #ec0c1f;"></ion-icon>
+          <a href="https://www.youtube.com/@manitechy" target="_blank">YouTube Channel</a>
         </li>
-        <li class="channel-item">
-          <a href="https://manitechy.medium.com/" target="_blank">Medium Blog</a>
+        <li>
           <ion-icon name="logo-medium" size="large" style="color: black;"></ion-icon>
+          <a href="https://manitechy.medium.com/" target="_blank">Medium Blog</a>
         </li>
-        <li class="channel-item">
-          <a href="https://community.aws/@mani2023" target="_blank">AWS Community Builder 🌩️</a>
+        <li>
+          🌩️
+          <a href="https://community.aws/@mani2023" target="_blank">AWS Community Builder</a>
         </li>
       </ul>
     </section>
 
-    <section id="Reachme" class="contact-section">
+    <section id="Reachme">
       <h2>📬 Reach Me Below</h2>
 
       <button onclick="showEmail()">Show Email</button>
-      <p id="email" style="display:none;">📧 Email: manikanta.suru@outlook.com</p>
+      <p id="email">📧 Email: manikanta.suru@outlook.com</p>
 
       <button onclick="showContact()">Show Contact</button>
-      <p id="contact" style="display:none;">📱 Contact Number: +91-7569413417</p>
+      <p id="contact">📱 Contact Number: +91-7569413417</p>
 
       <button onclick="showLocation()">Show Location</button>
-      <p id="location" style="display:none;">🏠 Location: Hyderabad, India</p>
+      <p id="location">🏠 Location: Hyderabad, India</p>
     </section>
   </main>
 
@@ -117,6 +141,7 @@
     <p>&copy; 2025 Manikanta Suru. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
   <script>
     function showEmail() {
       document.getElementById("email").style.display = "block";
