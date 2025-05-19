@@ -5,17 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biography - Manikanta Suru</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      border-radius: 50%;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .channel-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .channel-item ion-icon {
+      margin-left: 10px;
+    }
+    section {
+      margin-top: 40px;
+    }
+    .contact-section button {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-section p {
+      margin: 5px 0 15px 0;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #f2f2f2;
+    }
+  </style>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body style="background-color: white;">
+<body>
 
   <header>
-    <img src="Image.jpeg" alt="Manikanta Suru" width="200" style="border-radius: 50%;">
-    <marquee behavior="scroll" direction="left">
-      <h1>Manikanta Suru</h1>
-    </marquee>
+    <img src="Image.jpeg" alt="Manikanta Suru" width="200" />
+    <marquee behavior="scroll" direction="left"><h1>Manikanta Suru</h1></marquee>
     <h3>Senior Consultant</h3>
   </header>
 
@@ -24,42 +69,37 @@
       <h2>👨‍💻 About Me</h2>
       <p>
         I'm a postgraduate in Computer Applications (MCA) from the College of Engineering – Dr. B.R. Ambedkar University, Srikakulam.
-        With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure, along with deep experience in Windows Server administration and VMware virtualization.
+        With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure,
+        along with deep experience in Windows Server administration and VMware virtualization.
       </p>
     </section>
 
-    <section id="projects">
+    <section id="channels">
       <h2>🌐 My Channels</h2>
       <ul>
-        <li>
-          <a href="https://github.com/manikanta-suru" target="_blank" rel="noopener noreferrer">
-            Github Profile <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
-          </a>
+        <li class="channel-item">
+          <a href="https://github.com/manikanta-suru" target="_blank">Github Profile</a>
+          <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
         </li>
-        <li>
-          <a href="https://www.linkedin.com/in/manitechy/" target="_blank" rel="noopener noreferrer">
-            LinkedIn Profile <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
-          </a>
+        <li class="channel-item">
+          <a href="https://www.linkedin.com/in/manitechy/" target="_blank">LinkedIn Profile</a>
+          <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
         </li>
-        <li>
-          <a href="https://www.youtube.com/@manitechy" target="_blank" rel="noopener noreferrer">
-            Personal YouTube Channel <ion-icon name="logo-youtube" size="large" style="color: #ec0c1f;"></ion-icon>
-          </a>
+        <li class="channel-item">
+          <a href="https://www.youtube.com/@manitechy" target="_blank">Personal YouTube Channel</a>
+          <ion-icon name="logo-youtube" size="large" style="color: #ec0c1f;"></ion-icon>
         </li>
-        <li>
-          <a href="https://manitechy.medium.com/" target="_blank" rel="noopener noreferrer">
-            Medium Blog <ion-icon name="logo-medium" size="large" style="color: black;"></ion-icon>
-          </a>
+        <li class="channel-item">
+          <a href="https://manitechy.medium.com/" target="_blank">Medium Blog</a>
+          <ion-icon name="logo-medium" size="large" style="color: black;"></ion-icon>
         </li>
-        <li>
-          <a href="https://community.aws/@mani2023" target="_blank" rel="noopener noreferrer">
-            AWS Community Builder 🌩️
-          </a>
+        <li class="channel-item">
+          <a href="https://community.aws/@mani2023" target="_blank">AWS Community Builder 🌩️</a>
         </li>
       </ul>
     </section>
 
-    <section id="Reachme">
+    <section id="Reachme" class="contact-section">
       <h2>📬 Reach Me Below</h2>
 
       <button onclick="showEmail()">Show Email</button>
