@@ -4,75 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biography - Manikanta Suru</title>
-  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Ionicons for clean iconography -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
   <style>
-    body {
-      background-color: white;
-      font-family: Arial, sans-serif;
-      margin: 20px;
+    /* Premium Modern System Typography & Reset */
+    :root {
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      --card-bg: #ffffff;
     }
 
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* Header Profile Styling */
     header {
       text-align: center;
+      margin-bottom: 40px;
+      width: 100%;
     }
 
     header img {
       border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border: 4px solid white;
+      transition: transform 0.3s ease;
     }
 
-    h1, h2, h3 {
-      margin: 10px 0;
+    header img:hover {
+      transform: scale(1.05);
     }
 
-    section#about {
-      font-family: Calibri, sans-serif;
-      font-weight: bold;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    /* Modern CSS Marquee (Replaces old <marquee> tag) */
+    .name-scroller {
+      width: 100%;
+      max-width: 400px;
+      margin: 15px auto 5px auto;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
     }
 
+    h1 {
+      display: inline-block;
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      padding-left: 100%;
+      animation: scrollName 8s linear infinite;
+    }
+
+    /* Pause animation when user hovers over it */
+    .name-scroller:hover h1 {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollName {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    header h3 {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Card Layouts for Sections */
+    section {
+      background: var(--card-bg);
+      padding: 30px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section#about p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    /* Social Links Grid */
     ul.channel-list {
       list-style: none;
       padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
     }
 
     ul.channel-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+    }
+
+    ul.channel-list li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-color: #cbd5e1;
     }
 
     ul.channel-list a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
       text-decoration: none;
-      font-weight: bold;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
-    section#Reachme {
-      margin-top: 40px;
+    /* Interactive Reach Me Section */
+    .contact-wrapper {
+      margin-bottom: 16px;
+    }
+
+    .contact-wrapper:last-child {
+      margin-bottom: 0;
     }
 
     section#Reachme button {
-      margin: 10px 0;
-      padding: 8px 16px;
-      font-weight: bold;
+      width: 100%;
+      text-align: left;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
       cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    section#Reachme button:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    section#Reachme button::after {
+      content: '＋';
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+    }
+
+    /* Toggle state styling */
+    section#Reachme .contact-wrapper.active button::after {
+      content: '－';
     }
 
     section#Reachme p {
-      margin: 5px 0 15px 0;
-      display: none;
-      font-weight: bold;
+      margin: 0;
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      color: var(--text-muted);
+      font-size: 1rem;
+      background: #ffffff;
     }
 
+    section#Reachme .contact-wrapper.active p {
+      max-height: 50px; 
+      padding: 12px 20px;
+      border-top: 0;
+    }
+
+    /* Footer Customization */
     footer {
       text-align: center;
-      margin-top: 50px;
-      font-weight: bold;
+      margin-top: auto;
+      padding-top: 20px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -80,10 +233,13 @@
 <body>
 
   <header>
-    <img src="Image.jpeg" alt="Manikanta Suru" width="200">
-    <marquee behavior="scroll" direction="left">
+    <img src="Image.jpeg" alt="Manikanta Suru" width="160" height="160">
+    
+    <!-- Modern CSS Scrolling Name -->
+    <div class="name-scroller">
       <h1>Manikanta Suru</h1>
-    </marquee>
+    </div>
+
     <h3>Senior Consultant</h3>
   </header>
 
@@ -91,8 +247,8 @@
     <section id="about">
       <h2>👨‍💻 About Me</h2>
       <p>
-        I'm a postgraduate in Computer Applications (MCA) from the College of Engineering – Dr. B.R. Ambedkar University, Srikakulam.
-        With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure,
+        I'm a postgraduate in Computer Applications (MCA) from the College of Engineering – Dr. B.R. Ambedkar University, Srikakulam. 
+        With 11 years of experience in the IT and services industry, I bring hands-on expertise in managing cloud platforms like AWS and Microsoft Azure, 
         along with deep experience in Windows Server administration and VMware virtualization.
       </p>
     </section>
@@ -101,24 +257,28 @@
       <h2>🌐 My Channels</h2>
       <ul class="channel-list">
         <li>
-          <ion-icon name="logo-github" size="large" style="color: black;"></ion-icon>
-          <a href="https://github.com/manikanta-suru" target="_blank">GitHub Profile</a>
+          <a href="https://github.com/manikanta-suru" target="_blank">
+            <ion-icon name="logo-github" size="large" style="color: #181717;"></ion-icon>
+            GitHub Profile
+          </a>
         </li>
         <li>
-          <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
-          <a href="https://www.linkedin.com/in/manitechy/" target="_blank">LinkedIn Profile</a>
+          <a href="https://www.linkedin.com/in/manitechy/" target="_blank">
+            <ion-icon name="logo-linkedin" size="large" style="color: #0077b5;"></ion-icon>
+            LinkedIn Profile
+          </a>
         </li>
         <li>
-          <ion-icon name="logo-youtube" size="large" style="color: #ec0c1f;"></ion-icon>
-          <a href="https://www.youtube.com/@manitechy" target="_blank">YouTube Channel</a>
+          <a href="https://www.youtube.com/@manitechy" target="_blank">
+            <ion-icon name="logo-youtube" size="large" style="color: #ff0000;"></ion-icon>
+            YouTube Channel
+          </a>
         </li>
         <li>
-          <ion-icon name="logo-medium" size="large" style="color: black;"></ion-icon>
-          <a href="https://manitechy.medium.com/" target="_blank">Medium Blog</a>
-        </li>
-        <li>
-          🌩️
-          <a href="https://community.aws/@mani2023" target="_blank">AWS Community Builder</a>
+          <a href="https://manitechy.medium.com/" target="_blank">
+            <ion-icon name="logo-medium" size="large" style="color: #000000;"></ion-icon>
+            Medium Blog
+          </a>
         </li>
       </ul>
     </section>
@@ -126,35 +286,47 @@
     <section id="Reachme">
       <h2>📬 Reach Me Below</h2>
 
-      <button onclick="showEmail()">Show Email</button>
-      <p id="email">📧 Email: manikanta.suru@outlook.com</p>
+      <div class="contact-wrapper">
+        <button onclick="toggleDetails(this)">Show Email</button>
+        <p id="email">📧 Email: manikanta.suru@outlook.com</p>
+      </div>
 
-      <button onclick="showContact()">Show Contact</button>
-      <p id="contact">📱 Contact Number: +91-7569413417</p>
+      <div class="contact-wrapper">
+        <button onclick="toggleDetails(this)">Show Contact</button>
+        <p id="contact">📱 Contact: +91-7569413417</p>
+      </div>
 
-      <button onclick="showLocation()">Show Location</button>
-      <p id="location">🏠 Location: Hyderabad, India</p>
+      <div class="contact-wrapper">
+        <button onclick="toggleDetails(this)">Show Location</button>
+        <p id="location">🏠 Location: Hyderabad, India</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Manikanta Suru. All rights reserved.</p>
+    <p>&copy; 2026 Manikanta Suru. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
   <script>
-    function showEmail() {
-      document.getElementById("email").style.display = "block";
-    }
+    function toggleDetails(button) {
+      const wrapper = button.parentElement;
+      const isOpen = wrapper.classList.contains('active');
+      
+      // Auto-close other open sections for accordion effect
+      document.querySelectorAll('.contact-wrapper').forEach(el => {
+        el.classList.remove('active');
+        const btn = el.querySelector('button');
+        if(btn) btn.innerText = btn.innerText.replace('Hide', 'Show');
+      });
 
-    function showContact() {
-      document.getElementById("contact").style.display = "block";
-    }
-
-    function showLocation() {
-      document.getElementById("location").style.display = "block";
+      if (!isOpen) {
+        wrapper.classList.add('active');
+        button.innerText = button.innerText.replace('Show', 'Hide');
+      } else {
+        wrapper.classList.remove('active');
+        button.innerText = button.innerText.replace('Hide', 'Show');
+      }
     }
   </script>
-
 </body>
 </html>
